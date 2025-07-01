@@ -1,6 +1,6 @@
-import { cn } from "@/lib/utils";
 import type { ClassValue } from "clsx";
 import type { FC, ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
 interface Props {
   children: ReactNode;

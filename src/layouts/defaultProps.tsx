@@ -1,5 +1,5 @@
-import Iconify from "@/components/Iconify";
 import type { MenuDataItem } from "@ant-design/pro-components";
+import Iconify from "@/components/Iconify";
 
 export const menuData: MenuDataItem[] = [
   {

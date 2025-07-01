@@ -1,6 +1,6 @@
-import CopyTextButton from "@/components/CopyTextButton";
 import { Card, Input } from "antd";
 import type { FC } from "react";
+import CopyTextButton from "@/components/CopyTextButton";
 
 interface Props {
   title: string;

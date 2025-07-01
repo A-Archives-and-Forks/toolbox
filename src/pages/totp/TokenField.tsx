@@ -1,9 +1,9 @@
-import CopyTextButton from "@/components/CopyTextButton";
 import { useCountDown } from "ahooks";
 import { Form, Input, Progress, Space } from "antd";
 import { getSeconds } from "date-fns";
 import type { TOTP } from "otpauth";
 import { useEffect, useState } from "react";
+import CopyTextButton from "@/components/CopyTextButton";
 
 interface Props {
   totp?: TOTP;

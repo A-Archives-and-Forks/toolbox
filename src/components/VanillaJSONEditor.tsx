@@ -1,7 +1,14 @@
 import * as LosslessJSON from "lossless-json";
 import { useEffect, useRef } from "react";
-import { type JSONEditorPropsOptional, type JsonEditor, Mode, type TextContent } from "vanilla-jsoneditor";
-import { createJSONEditor, javascriptQueryLanguage, lodashQueryLanguage } from "vanilla-jsoneditor";
+import {
+  createJSONEditor,
+  type JSONEditorPropsOptional,
+  type JsonEditor,
+  javascriptQueryLanguage,
+  lodashQueryLanguage,
+  Mode,
+  type TextContent,
+} from "vanilla-jsoneditor";
 
 const VanillaJSONEditor = (props: JSONEditorPropsOptional) => {
   const containerRef = useRef<HTMLDivElement>(null);

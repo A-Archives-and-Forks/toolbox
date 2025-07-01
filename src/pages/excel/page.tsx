@@ -3,10 +3,9 @@ import type { UploadProps } from "antd";
 import { Button, Card, Space, Upload } from "antd";
 import FileSaver from "file-saver";
 import { useState } from "react";
-import * as XLSX from "xlsx";
-
 import type { IAceOptions } from "react-ace";
 import AceEditor from "react-ace";
+import * as XLSX from "xlsx";
 
 import "ace-builds/src-noconflict/mode-json";
 import "ace-builds/src-noconflict/theme-monokai";
@@ -40,7 +39,7 @@ export const Component = () => {
       const files = info.fileList;
       if (files) {
         for (const key in files) {
-          if (Object.prototype.hasOwnProperty.call(files, key)) {
+          if (Object.hasOwn(files, key)) {
             const fileReader = new FileReader();
             fileReader.onload = (e: ProgressEvent<FileReader>) => {
               if (!e.target) {

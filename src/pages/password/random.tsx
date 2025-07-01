@@ -18,14 +18,16 @@ export const Random = () => {
   const [generatorOptions, setGeneratorOptions] = useState<GeneratePasswordOptions>(initialOptions);
   const [randomString, setRandomString] = useState<string>("");
 
-  useEffect(() => {
-    refresh(generatorOptions);
-  }, [generatorOptions]);
-
   const refresh = (options = initialOptions) => {
     const varchar = generatePassword(options);
     setRandomString(varchar);
   };
+
+  useEffect(() => {
+    const varchar = generatePassword(generatorOptions);
+    setRandomString(varchar);
+  }, [generatorOptions]);
+
   return (
     <PageContainer title={false} className="mx-auto max-w-screen-lg px-4 pt-4">
       <div>

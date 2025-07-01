@@ -1,4 +1,3 @@
-import { PageContainer } from "@/components/ui";
 import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
 import Highlight from "@tiptap/extension-highlight";
 import ExtensionLink from "@tiptap/extension-link";
@@ -9,13 +8,13 @@ import { EditorProvider, useCurrentEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { Button, Dropdown, Space, Tooltip } from "antd";
 import copy from "copy-to-clipboard";
-import { common, createLowlight } from "lowlight";
-import type { FC } from "react";
-import { useCallback, useMemo } from "react";
-
 import css from "highlight.js/lib/languages/css";
 import json from "highlight.js/lib/languages/json";
 import xml from "highlight.js/lib/languages/xml";
+import { common, createLowlight } from "lowlight";
+import type { FC } from "react";
+import { useCallback, useMemo } from "react";
+import { PageContainer } from "@/components/ui";
 
 import { Icon } from "@/components/ui/Icon.tsx";
 import "highlight.js/styles/github.min.css";

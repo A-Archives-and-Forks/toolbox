@@ -2,7 +2,7 @@ import { registerSW } from "virtual:pwa-register";
 import { StyleProvider } from "@ant-design/cssinjs";
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
-import { RouterProvider, createBrowserRouter } from "react-router";
+import { createBrowserRouter, RouterProvider } from "react-router";
 
 import { routes } from "@/routes.tsx";
 

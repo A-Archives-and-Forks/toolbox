@@ -1,8 +1,8 @@
 import { PageContainer } from "@ant-design/pro-components";
-import { Card } from "antd";
 import type { CardProps } from "antd";
-import { useEffect, useState } from "react";
+import { Card } from "antd";
 import type React from "react";
+import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router";
 
 import Iconify from "@/components/Iconify";

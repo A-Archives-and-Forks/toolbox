@@ -11,8 +11,7 @@ import { colors } from "@repo/colors/tailwindcss";
 import type { ColorPickerProps, TabsProps } from "antd";
 import { Card, ColorPicker, Form, Tabs } from "antd";
 import { values } from "lodash-es";
-import { type FC, useMemo } from "react";
-import { useEffect, useState } from "react";
+import { type FC, useEffect, useMemo, useState } from "react";
 
 import type { PlaceholderConfig } from "@/components/placeholder";
 import DummyImage from "@/components/placeholder/DummyImage.tsx";

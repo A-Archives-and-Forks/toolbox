@@ -1,8 +1,7 @@
+import { PageContainer } from "@ant-design/pro-components";
 import type { FC } from "react";
 import { useEffect, useRef } from "react";
 import Vditor from "vditor";
-
-import { PageContainer } from "@ant-design/pro-components";
 import "vditor/dist/index.css";
 
 export const Component: FC = () => {

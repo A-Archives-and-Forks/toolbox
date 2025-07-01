@@ -1,14 +1,14 @@
 "use client";
 
-import { FullContainer } from "@/components/FullContainer.tsx";
-import { LanguageSelect } from "@/components/monaco-editor/LanguageSelect.tsx";
-import { cn } from "@/lib/utils.ts";
-import useJSONFormatterStore from "@/stores/JSONFormatterStore.ts";
 import type { Monaco, OnChange, OnMount, OnValidate } from "@monaco-editor/react";
 import { Editor } from "@monaco-editor/react";
 import { Divider } from "antd";
 import type { editor } from "monaco-editor";
 import { type FC, useEffect, useRef, useState } from "react";
+import { FullContainer } from "@/components/FullContainer.tsx";
+import { LanguageSelect } from "@/components/monaco-editor/LanguageSelect.tsx";
+import { cn } from "@/lib/utils.ts";
+import useJSONFormatterStore from "@/stores/JSONFormatterStore.ts";
 
 export const Component: FC = () => {
   const [editorStatus, setEditorStatus] = useState({

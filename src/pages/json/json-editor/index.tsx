@@ -1,6 +1,6 @@
 import { PageContainer } from "@ant-design/pro-components";
-import { Button, Dropdown, Space, Tabs } from "antd";
 import type { MenuProps, TabsProps } from "antd";
+import { Button, Dropdown, Space, Tabs } from "antd";
 import { indexOf, last } from "lodash-es";
 import type React from "react";
 import { useEffect, useState } from "react";

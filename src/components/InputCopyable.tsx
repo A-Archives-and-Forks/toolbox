@@ -1,5 +1,5 @@
-import CopyTextButton from "@/components/CopyTextButton";
 import { Input, Space } from "antd";
+import CopyTextButton from "@/components/CopyTextButton";
 
 export interface Props {
   value?: string;

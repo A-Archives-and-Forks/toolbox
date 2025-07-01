@@ -1,8 +1,8 @@
-import PageContainer from "@/components/ui/PageContainer.tsx";
 import type { SelectProps } from "antd";
 import { Card, InputNumber, Select, Space } from "antd";
 import type { FC } from "react";
 import { useEffect, useState } from "react";
+import PageContainer from "@/components/ui/PageContainer.tsx";
 
 const bitRateUnitOptions: SelectProps["options"] = [
   { label: "bps (bit/s)", value: "bps" },
