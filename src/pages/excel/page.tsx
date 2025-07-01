@@ -39,24 +39,22 @@ export const Component = () => {
       const files = info.fileList;
       if (files) {
         for (const key in files) {
-          if (Object.hasOwn(files, key)) {
-            const fileReader = new FileReader();
-            fileReader.onload = (e: ProgressEvent<FileReader>) => {
-              if (!e.target) {
-                return;
-              }
-              let data = e.target.result as ArrayBuffer;
-              data = new Uint8Array(data);
-              const workbook = XLSX.read(data, { type: "array" });
-              console.log(workbook);
-              const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
-              const rows = XLSX.utils.sheet_to_json(firstSheet) || [];
-              setResult(JSON.stringify(rows, null, 2));
-            };
-            const file = files[key];
-            if (file) {
-              fileReader.readAsArrayBuffer(file.originFileObj as File);
+          const fileReader = new FileReader();
+          fileReader.onload = (e: ProgressEvent<FileReader>) => {
+            if (!e.target) {
+              return;
             }
+            let data = e.target.result as ArrayBuffer;
+            data = new Uint8Array(data);
+            const workbook = XLSX.read(data, { type: "array" });
+            console.log(workbook);
+            const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
+            const rows = XLSX.utils.sheet_to_json(firstSheet) || [];
+            setResult(JSON.stringify(rows, null, 2));
+          };
+          const file = files[key];
+          if (file) {
+            fileReader.readAsArrayBuffer(file.originFileObj as File);
           }
         }
       }
