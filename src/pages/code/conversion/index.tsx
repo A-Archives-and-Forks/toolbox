@@ -110,7 +110,7 @@ export const Component = () => {
             </div>
           </div>
         </Card>
-        <div className="mt-4 grid flex-1 grid-cols-1 gap-4 md:grid-cols-2 ">
+        <div className="mt-4 grid flex-1 grid-cols-1 gap-4 md:grid-cols-2">
           <div>
             <AceEditor
               mode={sourceType}

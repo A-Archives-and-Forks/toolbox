@@ -21,7 +21,7 @@ export const Component = () => {
         label: `Tab ${idx}`,
         closable: true,
         children: <JsonEditor idx={idx} />,
-        className: "h-[calc(100dvh-112px)] md:h-[calc(100dvh-56px)]",
+        className: "h-[calc(100dvh-104px)] md:h-[calc(100dvh-48px)]",
       };
     });
     if (indexOf(jsonTabs, activeKey) === -1) {

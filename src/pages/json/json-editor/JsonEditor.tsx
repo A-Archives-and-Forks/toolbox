@@ -12,6 +12,7 @@ interface Props {
 const JSONBeta: FC<Props> = (props) => {
   const defaultValue = {
     mode: "text",
+    askToFormat: false,
     content: {
       text: "",
     },
