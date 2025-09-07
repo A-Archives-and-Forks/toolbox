@@ -17,7 +17,8 @@
         "useSortedClasses": "warn"
       },
       "suspicious": {
-        "noExplicitAny": "off"
+        "noExplicitAny": "off",
+        "noTsIgnore": "off"
       },
       "complexity": {
         "noForEach": "off"

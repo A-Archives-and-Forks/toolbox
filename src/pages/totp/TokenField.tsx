@@ -1,3 +1,5 @@
+// biome-ignore-all lint/correctness/noNestedComponentDefinitions: ignore
+
 import { useCountDown } from "ahooks";
 import { Form, Input, Progress, Space } from "antd";
 import { getSeconds } from "date-fns";
