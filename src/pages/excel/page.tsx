@@ -44,8 +44,7 @@ export const Component = () => {
             if (!e.target) {
               return;
             }
-            let data = e.target.result as ArrayBuffer;
-            data = new Uint8Array(data);
+            const data = new Uint8Array(e.target.result as ArrayBuffer);
             const workbook = XLSX.read(data, { type: "array" });
             console.log(workbook);
             const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
