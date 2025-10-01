@@ -134,6 +134,9 @@
     "workbox-window": "7.3.0"
   },
   "packageManager": "pnpm@10.17.1",
+  "engines": {
+    "node": "22"
+  },
   "pnpm": {
     "overrides": {
       "react": "19"
