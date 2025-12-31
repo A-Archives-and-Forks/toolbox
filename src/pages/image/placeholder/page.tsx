@@ -107,7 +107,8 @@ export const Component: FC = () => {
                       size="large"
                       showText
                       disabledAlpha
-                      className="w-full justify-start"
+                      className="flex w-full justify-start"
+                      style={{ justifyContent: "start" }}
                       {...pickControlPropsWithId(itemProps)}
                       onChange={(color) => {
                         form.setFieldValue("bgColor", color.toHexString());
@@ -126,7 +127,8 @@ export const Component: FC = () => {
                       size="large"
                       showText
                       disabledAlpha
-                      className="w-full justify-start"
+                      className="flex w-full justify-start"
+                      style={{ justifyContent: "start" }}
                       {...pickControlPropsWithId(itemProps)}
                       onChange={(color) => {
                         form.setFieldValue("textColor", color.toHexString());
