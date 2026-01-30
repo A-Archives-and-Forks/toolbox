@@ -59,7 +59,7 @@ export const Component: FC = () => {
     <PageContainer>
       <div className="h-full">
         <Card title="下载速度换算">
-          <div className="grid max-w-3xl grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-2">
             <Space.Compact className="w-full">
               <Space.Addon>宽带大小</Space.Addon>
               <InputNumber
