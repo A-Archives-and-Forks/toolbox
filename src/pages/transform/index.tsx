@@ -1,5 +1,4 @@
-import type { SelectProps } from "antd";
-import { Card, InputNumber, Select, Space } from "antd";
+import { Card, InputNumber, Select, type SelectProps, Space } from "antd";
 import type { FC } from "react";
 import { useEffect, useState } from "react";
 import PageContainer from "@/components/ui/PageContainer.tsx";
@@ -60,8 +59,9 @@ export const Component: FC = () => {
     <PageContainer>
       <div className="h-full">
         <Card title="下载速度换算">
-          <div className="grid max-w-screen-md grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-2">
             <Space.Compact className="w-full">
+              <Space.Addon>宽带大小</Space.Addon>
               <InputNumber
                 type="number"
                 value={bitRateValue}
@@ -70,13 +70,13 @@ export const Component: FC = () => {
                     setBitRateValue(val);
                   }
                 }}
-                addonBefore="宽带大小"
                 className="w-full"
               />
               <Select value={bitRateUnit} options={bitRateUnitOptions} onChange={setBitRateUnit} />
             </Space.Compact>
             <Space.Compact className="w-full">
-              <InputNumber type="number" addonBefore="下载速度" value={byteRateValue} readOnly className="w-full" />
+              <Space.Addon>下载速度</Space.Addon>
+              <InputNumber type="number" value={byteRateValue} readOnly className="w-full" />
               <Select value={byteRateUnit} options={byteRateUnitOptions} onChange={setByteRateUnit} />
             </Space.Compact>
           </div>
