@@ -1,5 +1,5 @@
-import { isMillisecond, isUnixSecond } from "@/utils/validator.ts";
 import { describe, expect, it } from "vitest";
+import { isMillisecond, isUnixSecond } from "@/utils/validator.ts";
 
 describe("isUnixSecond", () => {
   it("normal number", () => {
@@ -14,7 +14,7 @@ describe("isUnixSecond", () => {
 
 describe("isMillisecond", () => {
   it("normal number", () => {
-    const result = isMillisecond(new Date().getTime());
+    const result = isMillisecond(Date.now());
     expect(result).toEqual(true);
   });
 });

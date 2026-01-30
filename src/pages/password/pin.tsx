@@ -1,9 +1,9 @@
-import { RandomTextResult } from "@/components/RandomTextResult";
 import { Card, Divider, InputNumber, Slider, Typography } from "antd";
 import { customAlphabet } from "nanoid";
 import { numbers } from "nanoid-dictionary";
-import { useEffect, useState } from "react";
 import type { FC } from "react";
+import { useEffect, useState } from "react";
+import { RandomTextResult } from "@/components/RandomTextResult";
 
 const random = customAlphabet(numbers, 6);
 

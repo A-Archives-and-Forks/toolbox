@@ -1,21 +1,18 @@
-import { PageContainer } from "@/components/ui";
 import CodeBlockLowlight from "@tiptap/extension-code-block-lowlight";
 import Highlight from "@tiptap/extension-highlight";
-import ExtensionLink from "@tiptap/extension-link";
 import subscript from "@tiptap/extension-subscript";
 import superscript from "@tiptap/extension-superscript";
-import underline from "@tiptap/extension-underline";
 import { EditorProvider, useCurrentEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { Button, Dropdown, Space, Tooltip } from "antd";
 import copy from "copy-to-clipboard";
-import { common, createLowlight } from "lowlight";
-import type { FC } from "react";
-import { useCallback, useMemo } from "react";
-
 import css from "highlight.js/lib/languages/css";
 import json from "highlight.js/lib/languages/json";
 import xml from "highlight.js/lib/languages/xml";
+import { common, createLowlight } from "lowlight";
+import type { FC } from "react";
+import { useCallback, useMemo } from "react";
+import { PageContainer } from "@/components/ui";
 
 import { Icon } from "@/components/ui/Icon.tsx";
 import "highlight.js/styles/github.min.css";
@@ -214,7 +211,7 @@ const content = `
     display: none;
   }</code></pre>
   <p>
-    I know, I know, this is impressive. It’s only the tip of the iceberg though. Give it a try and click a little bit
+    <u>I know</u>, I know, this is impressive. It’s only the tip of the iceberg though. Give it a try and click a little bit
     around. Don’t forget to check the other examples too.
   </p>
   <blockquote>
@@ -247,15 +244,14 @@ export const Component: FC = () => {
         keepAttributes: false, // TODO : Making this as `false` becase marks are not preserved when I try to preserve attrs, awaiting a bit of help
       },
       codeBlock: false,
+      link: {
+        openOnClick: false,
+      },
     }),
     Highlight.configure({ HTMLAttributes: { class: "bg-yellow-500" } }),
-    underline,
     superscript,
     subscript,
     CodeBlockLowlight.configure({ lowlight: lowlight, defaultLanguage: "plaintext" }),
-    ExtensionLink.configure({
-      openOnClick: false,
-    }),
   ];
 
   return (

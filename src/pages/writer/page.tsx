@@ -1,10 +1,9 @@
-import { PageContainer } from "@/components/ui";
 import { Card } from "antd";
 import Quill from "quill";
 import type { FC } from "react";
 import { useCallback, useState } from "react";
-
 import CopyTextButton from "@/components/CopyTextButton";
+import { PageContainer } from "@/components/ui";
 
 import "quill/dist/quill.snow.css";
 

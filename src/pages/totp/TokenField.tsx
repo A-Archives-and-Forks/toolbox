@@ -1,9 +1,11 @@
-import CopyTextButton from "@/components/CopyTextButton";
+// biome-ignore-all lint/correctness/noNestedComponentDefinitions: ignore
+
 import { useCountDown } from "ahooks";
 import { Form, Input, Progress, Space } from "antd";
 import { getSeconds } from "date-fns";
 import type { TOTP } from "otpauth";
 import { useEffect, useState } from "react";
+import CopyTextButton from "@/components/CopyTextButton";
 
 interface Props {
   totp?: TOTP;
@@ -57,7 +59,10 @@ const TokenField = ({ totp }: Props) => {
   return (
     <Form.Item label="Token">
       <Space.Compact>
-        <Input value={token} addonAfter={<TokenProcess />} />
+        <Input value={token} />
+        <Space.Addon>
+          <TokenProcess />
+        </Space.Addon>
         <CopyTextButton text={token} />
       </Space.Compact>
     </Form.Item>

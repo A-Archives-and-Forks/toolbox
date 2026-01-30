@@ -1,14 +1,14 @@
 "use client";
 
-import { FullContainer } from "@/components/FullContainer.tsx";
-import { LanguageSelect } from "@/components/monaco-editor/LanguageSelect.tsx";
-import { cn } from "@/lib/utils.ts";
-import useJSONFormatterStore from "@/stores/JSONFormatterStore.ts";
 import type { Monaco, OnChange, OnMount, OnValidate } from "@monaco-editor/react";
 import { Editor } from "@monaco-editor/react";
 import { Divider } from "antd";
 import type { editor } from "monaco-editor";
 import { type FC, useEffect, useRef, useState } from "react";
+import { FullContainer } from "@/components/FullContainer.tsx";
+import { LanguageSelect } from "@/components/monaco-editor/LanguageSelect.tsx";
+import { cn } from "@/lib/utils.ts";
+import useJSONFormatterStore from "@/stores/JSONFormatterStore.ts";
 
 export const Component: FC = () => {
   const [editorStatus, setEditorStatus] = useState({
@@ -88,9 +88,9 @@ export const Component: FC = () => {
       />
       <div className={cn("h-[22px] px-4 text-sm tabular-nums")}>
         <span>{`Ln ${editorStatus.lineNumber}, Col ${editorStatus.column}`}</span>
-        <Divider type={"vertical"} />
+        <Divider orientation={"vertical"} />
         <span>{`Space ${options.tabSize}`}</span>
-        <Divider type={"vertical"} />
+        <Divider orientation={"vertical"} />
         <span>JSON with Comments</span>
       </div>
     </FullContainer>

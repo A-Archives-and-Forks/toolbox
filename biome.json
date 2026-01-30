@@ -1,12 +1,9 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "files": {
-    "include": ["src", "package.json", "biome.json", ".ncurc.json"],
-    "ignore": ["src/globals.css"]
+    "includes": ["src/**", "package.json", "biome.json", ".ncurc.json", "!src/globals.css"]
   },
-  "organizeImports": {
-    "enabled": true
-  },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "formatter": {
     "enabled": true,
     "indentStyle": "space",
@@ -20,7 +17,8 @@
         "useSortedClasses": "warn"
       },
       "suspicious": {
-        "noExplicitAny": "off"
+        "noExplicitAny": "off",
+        "noTsIgnore": "off"
       },
       "complexity": {
         "noForEach": "off"

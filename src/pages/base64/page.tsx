@@ -1,9 +1,8 @@
-import PageContainer from "@/components/ui/PageContainer.tsx";
 import type { SegmentedProps } from "antd";
 import { Button, Card, Input, Segmented, Space } from "antd";
 import { useCallback, useState } from "react";
-
 import TextResultBox from "@/components/TextResultBox.tsx";
+import PageContainer from "@/components/ui/PageContainer.tsx";
 import type { BaseType } from "@/lib/BaseEncoder.ts";
 import { decode as baseDecode, encode as baseEncode } from "@/lib/BaseEncoder.ts";
 

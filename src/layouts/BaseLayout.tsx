@@ -1,7 +1,7 @@
 import type { MenuDataItem, ProLayoutProps, ProSettings } from "@ant-design/pro-components";
 import { ProConfigProvider, ProLayout } from "@ant-design/pro-components";
 import { useBoolean } from "ahooks";
-import { App, Button, ConfigProvider } from "antd";
+import { App, Button } from "antd";
 import type { FC, ReactNode } from "react";
 import { Link, Outlet, useLocation, useNavigate } from "react-router";
 
@@ -83,17 +83,15 @@ const BaseLayout: FC = () => {
   };
 
   return (
-    <ConfigProvider theme={{ cssVar: true, hashed: false }}>
-      <ProConfigProvider hashed={false}>
-        <App>
-          <ProLayout {...proLayoutProps} {...settings}>
-            <div>
-              <Outlet />
-            </div>
-          </ProLayout>
-        </App>
-      </ProConfigProvider>
-    </ConfigProvider>
+    <ProConfigProvider hashed={false}>
+      <App>
+        <ProLayout {...proLayoutProps} {...settings}>
+          <div>
+            <Outlet />
+          </div>
+        </ProLayout>
+      </App>
+    </ProConfigProvider>
   );
 };
 export default BaseLayout;

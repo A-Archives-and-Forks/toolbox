@@ -1,6 +1,6 @@
 import { PageContainer } from "@ant-design/pro-components";
-import { Button, Dropdown, Space, Tabs } from "antd";
 import type { MenuProps, TabsProps } from "antd";
+import { Button, Dropdown, Space, Tabs } from "antd";
 import { indexOf, last } from "lodash-es";
 import type React from "react";
 import { useEffect, useState } from "react";
@@ -21,7 +21,7 @@ export const Component = () => {
         label: `Tab ${idx}`,
         closable: true,
         children: <JsonEditor idx={idx} />,
-        className: "h-[calc(100dvh-112px)] md:h-[calc(100dvh-56px)]",
+        className: "h-[calc(100dvh-104px)] md:h-[calc(100dvh-48px)]",
       };
     });
     if (indexOf(jsonTabs, activeKey) === -1) {

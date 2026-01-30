@@ -6,7 +6,7 @@ interface Props extends IconProps {}
 
 const Iconify: FC<Props> = ({ icon, ...props }) => {
   return (
-    <span className="anticon" aria-label={typeof icon === "string" ? icon : "icon"}>
+    <span className="anticon">
       <Icon icon={icon} {...props} />
     </span>
   );

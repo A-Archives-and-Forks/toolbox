@@ -1,9 +1,9 @@
-import Iconify from "@/components/Iconify";
 import type { ButtonProps } from "antd";
 import { App, Button } from "antd";
 import copy from "copy-to-clipboard";
-import type { FC } from "react";
 import type React from "react";
+import type { FC } from "react";
+import Iconify from "@/components/Iconify";
 
 interface Props extends ButtonProps {
   text?: string | null;
@@ -23,11 +23,9 @@ const CopyTextButton: FC<Props> = ({ text, children, ...props }) => {
     }
   };
   return (
-    <>
-      <Button icon={<Iconify icon="lucide:copy" />} onClick={onClick} {...props}>
-        {children}
-      </Button>
-    </>
+    <Button icon={<Iconify icon="lucide:copy" />} onClick={onClick} {...props}>
+      {children}
+    </Button>
   );
 };
 

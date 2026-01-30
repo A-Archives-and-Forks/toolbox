@@ -1,10 +1,10 @@
-import type { PlaceholderConfig } from "@/components/placeholder/index";
-import ImageWrapper from "@/pages/image/placeholder/ImageWrapper.tsx";
 import { Button } from "antd";
 import * as d3 from "d3";
 import d3ToPng from "d3-svg-to-png";
 import type { FC } from "react";
 import { useEffect, useRef } from "react";
+import type { PlaceholderConfig } from "@/components/placeholder/index";
+import ImageWrapper from "@/pages/image/placeholder/ImageWrapper.tsx";
 
 const LocalImage: FC<PlaceholderConfig> = (props) => {
   const containerRef = useRef(null);
