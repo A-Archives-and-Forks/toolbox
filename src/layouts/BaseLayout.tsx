@@ -83,7 +83,7 @@ const BaseLayout: FC = () => {
   };
 
   return (
-    <ConfigProvider theme={{ cssVar: true, hashed: false }}>
+    <ConfigProvider theme={{ hashed: false }}>
       <ProConfigProvider hashed={false}>
         <App>
           <ProLayout {...proLayoutProps} {...settings}>

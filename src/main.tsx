@@ -6,8 +6,6 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 
 import { routes } from "@/routes.tsx";
 
-import "@ant-design/v5-patch-for-react-19";
-
 import "@/i18n";
 
 import "./globals.css";
