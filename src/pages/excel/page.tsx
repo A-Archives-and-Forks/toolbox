@@ -62,7 +62,7 @@ export const Component = () => {
   return (
     <PageContainer title="Excel 转 JSON" className="mx-auto max-w-screen-md pt-4">
       <Card>
-        <Space direction="horizontal">
+        <Space orientation="horizontal">
           <Upload {...uploadProps}>
             <Button type="primary">上传 Excel</Button>
           </Upload>
