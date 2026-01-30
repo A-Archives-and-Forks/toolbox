@@ -88,9 +88,9 @@ export const Component: FC = () => {
       />
       <div className={cn("h-[22px] px-4 text-sm tabular-nums")}>
         <span>{`Ln ${editorStatus.lineNumber}, Col ${editorStatus.column}`}</span>
-        <Divider type={"vertical"} />
+        <Divider orientation={"vertical"} />
         <span>{`Space ${options.tabSize}`}</span>
-        <Divider type={"vertical"} />
+        <Divider orientation={"vertical"} />
         <span>JSON with Comments</span>
       </div>
     </FullContainer>
