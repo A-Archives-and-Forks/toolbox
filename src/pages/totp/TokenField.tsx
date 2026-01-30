@@ -59,7 +59,10 @@ const TokenField = ({ totp }: Props) => {
   return (
     <Form.Item label="Token">
       <Space.Compact>
-        <Input value={token} addonAfter={<TokenProcess />} />
+        <Input value={token} />
+        <Space.Addon>
+          <TokenProcess />
+        </Space.Addon>
         <CopyTextButton text={token} />
       </Space.Compact>
     </Form.Item>
